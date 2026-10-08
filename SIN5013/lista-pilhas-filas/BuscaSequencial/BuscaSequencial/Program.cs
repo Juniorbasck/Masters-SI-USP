@@ -1,26 +1,8 @@
-﻿using System;
-
-public class Registro
+﻿public class ListaSequencial
 {
-    public int Chave { get; set; }
-}
-
-public class ListaSequencial
-{
-    public Registro[] A { get; set; }
+    public int[] A { get; set; } = new int[Max];
     public int NroElem { get; set; }
     private const int Max = 50;
-
-    public ListaSequencial()
-    {
-        A = new Registro[Max];
-        NroElem = 0;
-
-        for (int i = 0; i < Max; i++)
-        {
-            A[i] = new Registro();
-        }
-    }
 }
 
 public class Program
@@ -31,14 +13,10 @@ public class Program
 
         while (i < l.NroElem)
         {
-            if (ch == l.A[i].Chave)
-            {
+            if (ch == l.A[i])
                 return i;
-            }
-            else
-            {
-                i++;
-            }
+            
+            i++;
         }
 
         return -1;
@@ -48,9 +26,9 @@ public class Program
     {
         ListaSequencial minhaLista = new ListaSequencial();
 
-        minhaLista.A[0].Chave = 10;
-        minhaLista.A[1].Chave = 25;
-        minhaLista.A[2].Chave = 42;
+        minhaLista.A[0] = 10;
+        minhaLista.A[1] = 25;
+        minhaLista.A[2] = 42;
         minhaLista.NroElem = 3;
 
         int chaveProcurada = 25;
