@@ -1,0 +1,10 @@
+
+# Configurações do JetBrains Rider
+.idea/
+
+# Configurações do VS Code
+.vscode/
+
+# Pastas de compilação do C#
+bin/
+obj/
