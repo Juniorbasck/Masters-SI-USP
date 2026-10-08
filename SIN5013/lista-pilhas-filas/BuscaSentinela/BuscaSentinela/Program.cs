@@ -10,7 +10,7 @@ public class Program
     public static int BuscaSentinela(ListaSequencial l, int ch)
     {
         int counter = 0;
-        
+
         l.A[l.NroElem] = ch;
 
         while (l.A[counter] != ch)
@@ -21,7 +21,7 @@ public class Program
         // 3. Se parou no sentinela, o item não estava na lista original
         if (counter == l.NroElem)
             return -1;
-        
+
         return counter;
     }
 
@@ -37,8 +37,8 @@ public class Program
         int buscado = 30;
         int resultado = BuscaSentinela(lista, buscado);
 
-        Console.WriteLine(resultado != -1 
-            ? $"Chave {buscado} encontrada no índice: {resultado}" 
+        Console.WriteLine(resultado != -1
+            ? $"Chave {buscado} encontrada no índice: {resultado}"
             : $"Chave {buscado} não encontrada.");
     }
 }
